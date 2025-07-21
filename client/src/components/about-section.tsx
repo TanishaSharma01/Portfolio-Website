@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { MapPin, GraduationCap, Coffee } from 'lucide-react';
+import { MapPin, GraduationCap, Coffee, SpaceIcon, Star, Rocket } from 'lucide-react';
 
 export default function AboutSection() {
   const stats = [
-    { value: '50+', label: 'Projects Completed', color: 'text-purple-400' },
-    { value: '5+', label: 'Years Experience', color: 'text-cyan-400' },
+    { value: '20+', label: 'Projects Completed', color: 'text-purple-400' },
+    { value: '1.5+', label: 'Years Experience', color: 'text-cyan-400' },
     { value: '20+', label: 'Technologies', color: 'text-green-400' },
-    { value: '100%', label: 'Client Satisfaction', color: 'text-amber-400' },
+    { value: '1', label: 'Publications', color: 'text-amber-400' },
   ];
 
   return (
@@ -46,15 +46,15 @@ export default function AboutSection() {
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center space-x-2 text-purple-400">
                 <MapPin className="h-4 w-4" />
-                <span>San Francisco, CA</span>
+                <span>ACT, Australia</span>
               </div>
               <div className="flex items-center space-x-2 text-cyan-400">
                 <GraduationCap className="h-4 w-4" />
-                <span>Computer Science, Stanford</span>
+                <span>Computing, ANU</span>
               </div>
               <div className="flex items-center space-x-2 text-green-400">
-                <Coffee className="h-4 w-4" />
-                <span>Coffee Enthusiast</span>
+                <Rocket className="h-4 w-4" />
+                <span>Space Enthusiast</span>
               </div>
             </div>
           </motion.div>
