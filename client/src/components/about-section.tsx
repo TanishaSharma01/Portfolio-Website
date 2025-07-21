@@ -22,7 +22,7 @@ export default function AboutSection() {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            Passionate about creating innovative solutions and bringing ideas to life through code
+            Algorithms, Ambition, and Adaptive Solutions
           </p>
         </motion.div>
         
@@ -35,11 +35,11 @@ export default function AboutSection() {
           >
             <div className="prose prose-lg prose-invert">
               <p className="text-slate-300 leading-relaxed">
-                I'm a passionate full-stack developer with over 5 years of experience in creating digital solutions that matter. My journey in software development began with a curiosity about how things work and has evolved into a deep expertise in modern web technologies.
+                Currently pursuing my Master of Computing with a specialization in Machine Learning at The Australian National University. With 1.8 years of professional experience at Nagarro, I've architected enterprise-scale solutions and optimized systems for critical business operations.
               </p>
               
               <p className="text-slate-300 leading-relaxed">
-                I specialize in building scalable applications using React, Node.js, and cloud technologies. When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.
+                I operate at the intersection of artificial intelligence and real-world impact, from engineering hybrid algorithms for medical diagnostics to developing classification systems for astrophysics research. Whether building neural networks to detect cosmic phenomena or creating automated systems for rocket testing operations, I translate complex problems into elegant solutions. This portfolio isn't just a showcase of technical skills—it's a testament to how I turn innovative ideas into working systems.
               </p>
             </div>
             
