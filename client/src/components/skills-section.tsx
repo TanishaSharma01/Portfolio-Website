@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Code, Laptop, Server, Database, Wrench, Settings } from 'lucide-react';
+import { Code, Laptop, Server, Database, Wrench, Settings, Brain } from 'lucide-react';
 import AnimatedProgress from './ui/animated-progress';
 
 export default function SkillsSection() {
@@ -9,10 +9,10 @@ export default function SkillsSection() {
       icon: Code,
       color: 'text-purple-400',
       skills: [
-        { name: 'JavaScript', level: 95 },
+        { name: 'Java', level: 95 },
         { name: 'Python', level: 90 },
         { name: 'TypeScript', level: 85 },
-        { name: 'Java', level: 80 },
+        { name: 'Javascript', level: 75 },
       ],
     },
     {
@@ -20,7 +20,7 @@ export default function SkillsSection() {
       icon: Laptop,
       color: 'text-cyan-400',
       skills: [
-        'React.js', 'Vue.js', 'Angular', 'Sass/SCSS', 'Tailwind CSS', 'Bootstrap'
+        'Angular', 'React.js', 'Vue.js', 'Sass/SCSS', 'Tailwind CSS', 'Bootstrap'
       ],
     },
     {
@@ -28,7 +28,7 @@ export default function SkillsSection() {
       icon: Server,
       color: 'text-green-400',
       skills: [
-        'Node.js', 'Express.js', 'Django', 'Flask', 'PHP', 'Ruby on Rails'
+        'Java', 'Python', 'Node.js', 'Express.js', 'Spring Boot', 'REST Apis'
       ],
     },
     {
@@ -40,19 +40,19 @@ export default function SkillsSection() {
       ],
     },
     {
-      title: 'Tools & Frameworks',
+      title: 'Development Tools',
       icon: Wrench,
       color: 'text-pink-400',
       skills: [
-        'Git/GitHub', 'Docker', 'Kubernetes', 'Jenkins', 'Jest/Testing', 'Webpack'
+        'Git/GitHub', 'Postman', 'Swagger', 'SonarQube','Docker', 'MLflow'
       ],
     },
     {
-      title: 'DevOps',
+      title: 'DevOps & Infrastructure',
       icon: Settings,
       color: 'text-red-400',
       skills: [
-        'AWS DevOps', 'CI/CD', 'Monitoring', 'Cloud Architecture', 'GitOps', 'Security'
+        'Kubernetes', 'Jenkins', 'Terraform', 'Ansible', 'CI/CD', 'Prometheus', 'Grafana', 'GitOps'
       ],
     },
   ];
@@ -90,15 +90,17 @@ export default function SkillsSection() {
               
               {category.title === 'Programming Languages' ? (
                 <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <AnimatedProgress
-                      key={skillIndex}
-                      value={skill.level}
-                      label={skill.name}
-                      color={category.color}
-                      delay={index * 200 + skillIndex * 100}
-                    />
-                  ))}
+                  {category.skills.map((skill, skillIndex) =>
+                    typeof skill === 'object' && 'level' in skill && 'name' in skill ? (
+                      <AnimatedProgress
+                        key={skillIndex}
+                        value={skill.level}
+                        label={skill.name}
+                        color={category.color}
+                        delay={index * 200 + skillIndex * 100}
+                      />
+                    ) : null
+                  )}
                 </div>
               ) : (
                 <div className="space-y-3">
@@ -111,7 +113,7 @@ export default function SkillsSection() {
                       className="flex items-center text-slate-300"
                     >
                       <div className={`w-2 h-2 rounded-full ${category.color.replace('text-', 'bg-')} mr-3`} />
-                      <span>{skill}</span>
+                      <span>{typeof skill === 'string' ? skill : (skill.name ?? '')}</span>
                     </motion.div>
                   ))}
                 </div>
