@@ -167,7 +167,6 @@ export default function ContactSection() {
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* <script src = "script.ts"></script> */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
                   Name
