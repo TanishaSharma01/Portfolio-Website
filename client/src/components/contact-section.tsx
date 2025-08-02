@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram, Send } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -12,13 +13,39 @@ export default function ContactSection() {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message! I'll get back to you soon.",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    
+    try {
+      // Pass the actual form data to EmailJS
+      await emailjs.send(
+        "service_cz72mgd", 
+        "template_3g8xnwc", 
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        },
+        "DkTSYj_nCo6V40-nm" // public key
+      );
+      
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message! I'll get back to you soon.",
+      });
+      
+      // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -140,6 +167,7 @@ export default function ContactSection() {
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* <script src = "script.ts"></script> */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
                   Name
@@ -207,7 +235,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center justify-center"
-              >
+                >
                 <Send className="mr-2 h-4 w-4" />
                 Send Message
               </button>
