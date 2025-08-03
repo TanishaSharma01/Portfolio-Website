@@ -35,7 +35,7 @@ export default function ExperienceSection() {
   const education = [
     {
       degree: 'Master of Computing',
-      school: 'Australian National University',
+      school: 'Australian National University (ANU), Australia',
       period: '2025 - Present',
       description: 'Specializing in Machine Learning. Studied Computer Vision, Structured Programming, Software Construction, Design Patterns, and Human-Computer Interaction for comprehensive computing expertise.',
       achievements: ['GPA: 6.00/7.00', 'Distinction'],
@@ -43,8 +43,8 @@ export default function ExperienceSection() {
       dotColor: 'bg-cyan-500',
     },
     {
-      degree: 'Bachelor of Technology in Computer Science and Engineering',
-      school: 'Guru Nanak Dev University, Amritsar',
+      degree: 'Bachelor of Technology in Computer\n Science and Engineering',
+      school: 'Guru Nanak Dev University, Amritsar, India',
       period: '2019 - 2023',
       description: 'Comprehensive study of software development principles, algorithms, and data structures. Published research in machine learning for breast cancer detection using neural networks.',
       achievements: ['GPA: 8.57'],
@@ -56,8 +56,7 @@ export default function ExperienceSection() {
   const certifications = [
     { name: 'Silver League, Cloud Skills Boost', company:' Google Cloud' },
     { name: 'Deep Learning Specialization', company:' Coursera'},
-    { name: 'ML Summer School', company:' Amazon' },
-    { name: 'GCP Cloud Facilitator Program', company:' Google' }
+    { name: 'ML Summer School', company:' Amazon' }
   ];
 
   return (
@@ -151,7 +150,7 @@ export default function ExperienceSection() {
                   <div className={`absolute w-4 h-4 ${edu.dotColor} rounded-full -left-2 top-0`} />
                   <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                      <h4 className="text-lg font-semibold text-slate-100">{edu.degree}</h4>
+                      <h4 className="text-lg font-semibold text-slate-100 whitespace-pre-line">{edu.degree}</h4>
                       <span className="text-sm text-slate-400">{edu.period}</span>
                     </div>
                     <p className="text-green-400 font-medium mb-3">{edu.school}</p>
