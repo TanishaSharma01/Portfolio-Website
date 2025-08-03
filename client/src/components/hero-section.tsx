@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Mail, Github, Linkedin, Twitter, Globe, ChevronDown } from 'lucide-react';
+import { ArrowRight, Mail, Github, Linkedin, Twitter, Globe, ChevronDown, Cloud, ArrowDown, ArrowDown01 } from 'lucide-react';
 // Update the import path below if the file exists elsewhere, for example:
 import TypingAnimation from "./ui/typing-animation";
 // Or create the file at ./ui/typing-animation.tsx if it does not exist.
@@ -57,14 +57,23 @@ export default function HeroSection() {
           >
             <button
               onClick={() => scrollToSection('projects')}
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-purple-600 hover:bg-purple-700 transition-colors duration-300 shadow-lg hover:shadow-purple-500/25"
+              className="relative inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-purple-600 hover:bg-purple-700 transition-colors duration-300 shadow-lg hover:shadow-purple-500/25 before:content-[''] before:absolute before:inset-0 before:-z-10 before:rounded-lg before:blur-xl before:opacity-60 before:bg-purple-500/40"
             >
               View My Work
               <ArrowRight className="ml-2 h-4 w-4" />
             </button>
+            <a
+              href="https://drive.google.com/file/d/1P2Y_D8UgICmP9OdCcnuHXMxglE9-4roG/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-blue-500/25 before:content-[''] before:absolute before:inset-0 before:-z-10 before:rounded-lg before:blur-xl before:opacity-60 before:bg-blue-500/40"
+            >
+              View Resume
+              <ArrowDown className="ml-2 h-4 w-4" />
+            </a>
             <button
               onClick={() => scrollToSection('contact')}
-              className="inline-flex items-center px-8 py-3 border border-cyan-400 text-base font-medium rounded-lg text-cyan-400 hover:bg-cyan-400/10 transition-colors duration-300"
+              className="inline-flex items-center px-8 py-3 border border-cyan-400 text-base font-medium rounded-lg text-cyan-400 hover:bg-cyan-400/10 transition-colors duration-300 shadow-lg hover:shadow-cyan-500/25"
             >
               Get In Touch
               <Mail className="ml-2 h-4 w-4" />
@@ -82,6 +91,9 @@ export default function HeroSection() {
             </a>
             <a href="https://www.linkedin.com/in/tanisha-sharma-465aa71b6/" className="text-slate-400 hover:text-cyan-400 transition-colors duration-300">
               <Linkedin className="h-6 w-6" />
+            </a>
+            <a href="https://www.cloudskillsboost.google/public_profiles/b04b5108-59f9-4ad6-bc54-13cd652522e4" className="text-slate-400 hover:text-green-400 transition-colors duration-300">
+              <Cloud className="h-6 w-6" />
             </a>
           </motion.div>
         </motion.div>
