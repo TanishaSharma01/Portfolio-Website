@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, GraduationCap, Coffee, SpaceIcon, Star, Rocket } from 'lucide-react';
+import { MapPin, GraduationCap, Coffee, SpaceIcon, Star, Rocket, Globe, ArrowUpAZIcon } from 'lucide-react';
 
 export default function AboutSection() {
   const stats = [
@@ -54,7 +54,7 @@ export default function AboutSection() {
               </div>
               <div className="flex items-center space-x-2 text-green-400">
                 <Rocket className="h-4 w-4" />
-                <span>Space Enthusiast</span>
+                <span>Tech Enthusiast</span>
               </div>
             </div>
           </motion.div>
