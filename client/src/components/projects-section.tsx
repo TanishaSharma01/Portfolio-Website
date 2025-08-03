@@ -118,13 +118,6 @@ export default function ProjectsSection() {
                     )}
                     {project.document ? 'PDF' : 'Code'}
                   </a>
-                  <a
-                    href="#"
-                    className="flex items-center text-cyan-400 hover:text-green-400 transition-colors duration-300"
-                  >
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Demo
-                  </a>
                 </div>
               </div>
             </motion.div>
