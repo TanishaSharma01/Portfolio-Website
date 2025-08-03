@@ -51,7 +51,7 @@
 1. **Clone the repository**
    ```bash
    git clone https://github.com/TanishaSharma01/Portfolio-Website.git
-   cd portfolio-website
+   cd Portfolio-Website
    ```
 
 2. **Install dependencies**
