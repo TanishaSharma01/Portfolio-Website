@@ -4,29 +4,29 @@ import { Briefcase, GraduationCap, Award } from 'lucide-react';
 export default function ExperienceSection() {
   const workExperience = [
     {
-      title: 'Senior Full Stack Developer',
-      company: 'TechCorp Inc.',
-      period: '2022 - Present',
-      description: 'Leading a team of 8 developers in building scalable web applications. Implemented microservices architecture resulting in 40% performance improvement.',
-      technologies: ['React', 'Node.js', 'AWS'],
-      color: 'border-purple-500',
-      dotColor: 'bg-purple-500',
-    },
-    {
-      title: 'Full Stack Developer',
-      company: 'StartupXYZ',
-      period: '2020 - 2022',
-      description: 'Developed and maintained multiple client-facing applications. Collaborated with design team to create responsive and user-friendly interfaces.',
-      technologies: ['Vue.js', 'Python', 'Django'],
+      title: 'Software Developer, Propulsion Team',
+      company: 'ANU Rocketry',
+      period: '2025 - Present',
+      description: 'Enhanced remote rocket test stand control system featuring React frontend and Python backend on Raspberry Pi for safe 1km+ wireless operations.',
+      technologies: ['Python', 'React', 'Raspberry Pi'],
       color: 'border-cyan-500',
       dotColor: 'bg-cyan-500',
     },
     {
-      title: 'Junior Developer',
-      company: 'WebSolutions LLC',
-      period: '2019 - 2020',
-      description: 'Started my professional journey building websites and learning modern development practices. Contributed to open-source projects and gained experience in agile development.',
-      technologies: ['JavaScript', 'PHP', 'MySQL'],
+      title: 'Associate Engineer',
+      company: 'Nagarro',
+      period: '2023 - 2025',
+      description: 'Designed scalable microservices architecture using Java Spring Boot, API Gateway, Eureka Server with 30% scalability and 40% reliability improvements.',
+      technologies: ['Java', 'Spring Boot', 'AWS'],
+      color: 'border-purple-500',
+      dotColor: 'bg-purple-500',
+    },
+    {
+      title: 'Subject Matter Expert',
+      company: 'Chegg India',
+      period: '2021 - 2022',
+      description: 'Provided high-quality solutions to complex computer science questions, improving content accuracy and student comprehension through detailed explanations and examples.',
+      technologies: ['Java', 'Algorithms', 'Formal Language and Automata Theory'],
       color: 'border-green-500',
       dotColor: 'bg-green-500',
     },
@@ -34,30 +34,30 @@ export default function ExperienceSection() {
 
   const education = [
     {
-      degree: 'Master of Science in Computer Science',
-      school: 'Stanford University',
-      period: '2017 - 2019',
-      description: 'Specialized in Software Engineering and Machine Learning. Graduated with highest honors. Thesis on "Scalable Microservices Architecture".',
-      achievements: ['GPA: 3.9', 'Summa Cum Laude'],
+      degree: 'Master of Computing',
+      school: 'Australian National University',
+      period: '2025 - Present',
+      description: 'Specializing in Machine Learning. Studied Computer Vision, Structured Programming, Software Construction, Design Patterns, and Human-Computer Interaction for comprehensive computing expertise.',
+      achievements: ['GPA: 6.00/7.00', 'Distinction'],
       color: 'border-cyan-500',
       dotColor: 'bg-cyan-500',
     },
     {
-      degree: 'Bachelor of Science in Software Engineering',
-      school: 'UC Berkeley',
-      period: '2013 - 2017',
-      description: 'Comprehensive study of software development principles, algorithms, and data structures. Active in coding competitions and hackathons.',
-      achievements: ['GPA: 3.8', 'Dean\'s List'],
+      degree: 'Bachelor of Technology in Computer Science and Engineering',
+      school: 'Guru Nanak Dev University, Amritsar',
+      period: '2019 - 2023',
+      description: 'Comprehensive study of software development principles, algorithms, and data structures. Published research in machine learning for breast cancer detection using neural networks.',
+      achievements: ['GPA: 8.57'],
       color: 'border-green-500',
       dotColor: 'bg-green-500',
     },
   ];
 
   const certifications = [
-    { name: 'AWS Certified Solutions Architect', year: '2023' },
-    { name: 'Google Cloud Professional Developer', year: '2022' },
-    { name: 'Certified Kubernetes Administrator', year: '2021' },
-    { name: 'React Advanced Certification', year: '2020' },
+    { name: 'Silver League, Cloud Skills Boost', company:' Google Cloud' },
+    { name: 'Deep Learning Specialization', company:' Coursera'},
+    { name: 'ML Summer School', company:' Amazon' },
+    { name: 'GCP Cloud Facilitator Program', company:' Google' }
   ];
 
   return (
@@ -187,7 +187,7 @@ export default function ExperienceSection() {
                   {certifications.map((cert, index) => (
                     <div key={index} className="flex items-center justify-between">
                       <span className="text-slate-300">{cert.name}</span>
-                      <span className="text-sm text-amber-400">{cert.year}</span>
+                      <span className="text-sm text-amber-400">{cert.company}</span>
                     </div>
                   ))}
                 </div>

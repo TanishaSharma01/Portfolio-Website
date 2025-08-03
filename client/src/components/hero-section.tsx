@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail, Github, Linkedin, Twitter, Globe, ChevronDown } from 'lucide-react';
-import TypingAnimation from "@/components/ui/typing-animation";
+// Update the import path below if the file exists elsewhere, for example:
+import TypingAnimation from "./ui/typing-animation";
+// Or create the file at ./ui/typing-animation.tsx if it does not exist.
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -80,9 +82,6 @@ export default function HeroSection() {
             </a>
             <a href="https://www.linkedin.com/in/tanisha-sharma-465aa71b6/" className="text-slate-400 hover:text-cyan-400 transition-colors duration-300">
               <Linkedin className="h-6 w-6" />
-            </a>
-            <a href="#" className="text-slate-400 hover:text-amber-400 transition-colors duration-300">
-              <Globe className="h-6 w-6" />
             </a>
           </motion.div>
         </motion.div>

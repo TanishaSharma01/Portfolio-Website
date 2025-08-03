@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Instagram, Send, BriefcaseBusiness, Cloud } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '../hooks/use-toast';
 import emailjs from '@emailjs/browser';
@@ -75,6 +75,7 @@ export default function ContactSection() {
   const socialLinks = [
   { icon: Github, url: "https://github.com/TanishaSharma01", color: 'text-purple-400', bgColor: 'bg-purple-500/20', hoverColor: 'hover:bg-purple-500/30' },
   { icon: Linkedin, url: "https://www.linkedin.com/in/tanisha-sharma-465aa71b6/", color: 'text-cyan-400', bgColor: 'bg-cyan-500/20', hoverColor: 'hover:bg-cyan-500/30' },
+  { icon: Cloud, url: "https://www.cloudskillsboost.google/public_profiles/b04b5108-59f9-4ad6-bc54-13cd652522e4", color: 'text-green-400', bgColor: 'bg-green-500/20', hoverColor: 'hover:bg-green-500/30' }
 ];
 
   return (
@@ -133,8 +134,8 @@ export default function ContactSection() {
               className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
             >
               <h3 className="text-xl font-semibold mb-6 text-cyan-400 flex items-center">
-                <Github className="mr-3 h-5 w-5" />
-                Follow Me
+                < BriefcaseBusiness className="mr-3 h-5 w-5" />
+                Find Me On
               </h3>
               
               <div className="flex space-x-4">
