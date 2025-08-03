@@ -23,8 +23,6 @@ Preferred communication style: Simple, everyday language.
 ### Backend Architecture
 - **Runtime**: Node.js with Express.js framework
 - **Language**: TypeScript with ES modules
-- **Database**: PostgreSQL with Drizzle ORM
-- **Database Provider**: Neon Database (serverless PostgreSQL)
 - **Session Management**: Connect-pg-simple for PostgreSQL session store
 - **Development**: Hot module replacement with Vite integration
 
@@ -50,7 +48,6 @@ Preferred communication style: Simple, everyday language.
 ### Backend Components
 - **Express Server**: RESTful API with middleware for logging and error handling
 - **Storage Layer**: Abstracted storage interface with memory implementation
-- **Database Schema**: User model with username/password authentication
 - **Route Registration**: Modular route organization with HTTP server creation
 
 ### UI Components
@@ -72,14 +69,8 @@ Preferred communication style: Simple, everyday language.
 ### Server-Side Data Flow
 1. Express middleware handles request logging and JSON parsing
 2. Routes process API requests and interact with storage layer
-3. Storage interface abstracts database operations
 4. Error handling middleware catches and formats errors
 5. Response data flows back to client through JSON API
-
-### Database Schema
-- **Users Table**: Basic user authentication with id, username, password
-- **Drizzle ORM**: Type-safe database operations with PostgreSQL
-- **Migrations**: Database schema versioning and deployment
 
 ## External Dependencies
 
@@ -93,7 +84,6 @@ Preferred communication style: Simple, everyday language.
 
 ### Backend Dependencies
 - **Server Framework**: Express.js with TypeScript support
-- **Database**: Drizzle ORM, @neondatabase/serverless
 - **Session Management**: express-session, connect-pg-simple
 - **Development**: tsx for TypeScript execution, esbuild for bundling
 - **Validation**: Zod with drizzle-zod integration
@@ -108,19 +98,11 @@ Preferred communication style: Simple, everyday language.
 
 ### Development Environment
 - **Local Development**: Vite dev server with HMR and Express backend
-- **Environment Variables**: DATABASE_URL for PostgreSQL connection
 - **Development Scripts**: `npm run dev` for concurrent client/server development
 
 ### Production Build
 - **Client Build**: Vite builds optimized static assets to `dist/public`
 - **Server Build**: ESBuild bundles Express server to `dist/index.js`
 - **Static Serving**: Express serves built client files in production
-- **Database Migrations**: Drizzle kit handles schema migrations
-
-### Database Configuration
-- **PostgreSQL**: Configured for production with Neon Database
-- **Connection**: Environment variable-based connection string
-- **Schema Management**: Drizzle migrations in `/migrations` directory
-- **Development Fallback**: Memory storage implementation for testing
 
 The application is designed as a modern, performant portfolio website that can showcase a developer's work professionally while maintaining excellent user experience through smooth animations and responsive design.
