@@ -29,10 +29,15 @@
 
 ## 🎯 Demo
 
-[**Live Demo**](https://your-portfolio-url.com)
+[**Live Demo**](http://tanisha-sharma.surge.sh/)
+<img width="1893" height="957" alt="image" src="https://github.com/user-attachments/assets/4e6f6619-a0c9-4734-95dd-b426c18e463c" />
+<img width="1667" height="932" alt="image" src="https://github.com/user-attachments/assets/9a9faee0-eda4-49b3-a187-180729218885" />
+<img width="1685" height="967" alt="image" src="https://github.com/user-attachments/assets/8da8aa4b-f2c7-4874-8906-2fddbe15b366" />
+<img width="1768" height="958" alt="image" src="https://github.com/user-attachments/assets/4eab96ff-acf4-44a7-9737-8fb846c8e8b0" />
+<img width="1723" height="937" alt="image" src="https://github.com/user-attachments/assets/8e217b1a-3c73-4357-8bb7-8b888bb61b39" />
+<img width="1695" height="962" alt="image" src="https://github.com/user-attachments/assets/c3423166-5718-4fcb-b07e-6d5df1a4d592" />
 
 <!-- Add screenshots here -->
-<!-- ![Portfolio Preview](./docs/images/preview.png) -->
 
 ## 🚀 Quick Start
 
@@ -46,7 +51,7 @@
 1. **Clone the repository**
    ```bash
    git clone https://github.com/TanishaSharma01/Portfolio-Website.git
-   cd portfolio-website
+   cd Portfolio-Website
    ```
 
 2. **Install dependencies**
