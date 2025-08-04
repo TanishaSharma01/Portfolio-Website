@@ -29,7 +29,7 @@
 
 ## 🎯 Demo
 
-[**Live Demo**](http://tanisha-sharma.surge.sh/)
+[**Live Demo**](https://tanishasharma01.github.io/Portfolio-Website/)
 <img width="1893" height="957" alt="image" src="https://github.com/user-attachments/assets/4e6f6619-a0c9-4734-95dd-b426c18e463c" />
 <img width="1667" height="932" alt="image" src="https://github.com/user-attachments/assets/9a9faee0-eda4-49b3-a187-180729218885" />
 <img width="1685" height="967" alt="image" src="https://github.com/user-attachments/assets/8da8aa4b-f2c7-4874-8906-2fddbe15b366" />
